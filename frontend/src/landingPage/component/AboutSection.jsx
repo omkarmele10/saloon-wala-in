@@ -21,8 +21,8 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id ="about" className="py-28 px-6 bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-28  bg-gradient-to-b from-purple-50 to-white">
+      <div className="max-w-7xl  px-4 grid md:grid-cols-2 gap-16 items-center">
         {/* IMAGE */}
         <motion.img
           src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=870&auto=format&fit=crop"
@@ -34,11 +34,11 @@ export default function AboutSection() {
 
         {/* CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 15 }}
           whileInView={{ opacity: 1, x: 0 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About Our Spa & Salon Platform
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            About Our Platform
           </h2>
 
           <p className="text-gray-700 mb-4 leading-relaxed">
@@ -54,7 +54,7 @@ export default function AboutSection() {
           </p>
 
           {/* STATS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {stats.map((item, i) => (
               <motion.div
                 key={item.label}
@@ -63,7 +63,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15 }}
               >
-                <h3 className="text-3xl font-bold text-purple-600">
+                <h3 className="text-2xl font-bold text-purple-600">
                   {item.value}
                 </h3>
                 <p className="text-sm text-gray-600 mt-2">{item.label}</p>

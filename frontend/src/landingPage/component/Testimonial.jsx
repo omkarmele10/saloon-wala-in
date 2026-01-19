@@ -36,7 +36,7 @@ export default function Testimonial() {
       className="py-28 px-6 bg-gradient-to-b from-purple-100 to-pink-50"
     >
       {/* Heading */}
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
         What Our Users Say
       </h2>
 

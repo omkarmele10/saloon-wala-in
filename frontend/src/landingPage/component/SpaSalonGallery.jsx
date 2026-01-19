@@ -11,10 +11,10 @@ export default function SpaSalonGallery() {
   ];
 
   return (
-    <section  className="py-28 px-6 bg-linear-to-b from-purple-50 to-white">
+    <section className="py-28 px-6 bg-linear-to-b from-purple-50 to-white">
       {/* Heading */}
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-center mb-6"
+        className="text-2xl md:text-3xl font-bold text-center mb-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -51,7 +51,7 @@ export default function SpaSalonGallery() {
             {/* Overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end">
               <div className="p-6">
-                <h3 className="text-white text-lg font-semibold">
+                <h3 className="text-white   font-semibold">
                   Premium Beauty Experience
                 </h3>
                 <p className="text-purple-200 text-sm">

@@ -42,15 +42,15 @@ export default function Contact() {
             {/* Heading */}
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <motion.h2
-                    className="text-4xl md:text-5xl font-bold mb-4 text-[--color-dark]"
-                    initial={{ opacity: 0, y: 20 }}
+                    className="text-2xl md:text-4xl font-bold mb-4 text-[--color-dark]"
+                    initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                 >
                     Contact Us
                 </motion.h2>
 
                 <motion.p
-                    className="text-gray-600 text-lg"
+                    className="text-gray-600 "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                 >
@@ -63,7 +63,7 @@ export default function Contact() {
                 {/* LEFT – CONTACT DETAILS */}
                 <motion.div
                     className="bg-primary text-white rounded-3xl p-10 flex flex-col justify-between shadow-lg"
-                    initial={{ opacity: 0, x: -30 }}
+                    initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                 >
                     <div>
@@ -137,7 +137,7 @@ export default function Contact() {
                     ref={formRef}
                     className="bg-white rounded-3xl shadow-xl p-10"
                     onSubmit={handleSubmit}
-                    initial={{ opacity: 0, x: 30 }}
+                    initial={{ opacity: 0, x: 15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                 >
                     <h4 className="text-2xl font-semibold mb-8 text-[--color-dark]">

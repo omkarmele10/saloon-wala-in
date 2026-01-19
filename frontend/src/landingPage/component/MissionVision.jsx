@@ -14,7 +14,7 @@ export default function MissionVision() {
                 {/* Heading */}
                 <div className="text-center mb-20">
                     <motion.h2
-                        className="text-4xl md:text-5xl font-extrabold text-[--color-dark] mb-6"
+                        className="text-2xl md:text-3xl font-extrabold  mb-6"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
@@ -25,7 +25,7 @@ export default function MissionVision() {
                     </motion.h2>
 
                     <motion.p
-                        className="text-gray-600 max-w-3xl mx-auto text-lg"
+                        className="text-gray-600 max-w-3xl mx-auto "
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -59,7 +59,7 @@ export default function MissionVision() {
                                 </h3>
                             </div>
 
-                            <p className="text-gray-700 leading-relaxed text-lg">
+                            <p className="text-gray-700 leading-relaxed ">
                                 Our mission is to simplify how people discover, compare, and
                                 book spa & salon services. We aim to empower customers with
                                 transparent choices while helping salon and spa owners grow
@@ -83,12 +83,12 @@ export default function MissionVision() {
                                 <div className="bg-secondary text-white p-4 rounded-2xl shadow-lg">
                                     <Eye size={26} />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-[--color-dark]">
+                                <h3 className="text-2xl font-semibold ">
                                     Our Vision
                                 </h3>
                             </div>
 
-                            <p className="text-gray-700 leading-relaxed text-lg">
+                            <p className="text-gray-700 leading-relaxed text-sm">
                                 Our vision is to become the most trusted spa & salon multivendor
                                 ecosystem, where customers can access premium wellness services
                                 effortlessly and vendors can manage bookings, grow visibility,

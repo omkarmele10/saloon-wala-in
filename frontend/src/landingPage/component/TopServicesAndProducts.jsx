@@ -62,7 +62,7 @@ const TopServicesAndProducts = () => {
 
                 {/* SECTION TITLE */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-extrabold text-gray-900">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
                         Top Services & Products
                     </h2>
                     <p className="text-gray-600 mt-4">
