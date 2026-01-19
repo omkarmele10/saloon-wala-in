@@ -19,7 +19,7 @@ export default function SpaSalonGallery() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Spa & Salon Gallery
+        Gallery
       </motion.h2>
 
       <motion.p

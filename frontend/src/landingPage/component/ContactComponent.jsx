@@ -68,7 +68,7 @@ export default function Contact() {
                 >
                     <div>
                         <h3 className="text-2xl font-semibold mb-4">
-                            All-in-One Spa & Salon Platform
+                            SALOON WALA
                         </h3>
 
                         <p className="text-white/80 mb-10 leading-relaxed">
@@ -84,7 +84,7 @@ export default function Contact() {
 
                             <div className="flex items-center gap-4">
                                 <Mail size={18} />
-                                <span>support@spasalon.com</span>
+                                <span>support@saloonwala.com</span>
                             </div>
 
                             <div className="flex items-start gap-4">

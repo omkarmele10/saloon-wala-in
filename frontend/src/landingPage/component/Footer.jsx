@@ -76,7 +76,7 @@ export default function Footer() {
               <Phone size={18} /> +91 9XXXXXXXXX
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={18} /> support@spasalon.com
+              <Mail size={18} /> support@saloonwala.com
             </li>
             <li className="flex items-start gap-3">
               <MapPin size={18} className="mt-1" />
@@ -114,7 +114,7 @@ export default function Footer() {
       {/* FOOTER BOTTOM */}
       <div className="border-t border-white/20 text-center py-6 text-sm text-white/70">
         <p className="text-white/70 text-sm">
-          © 2026 All-in-One Spa & Salon Platform. Developed & Managed by{" "}
+          © 2026 Developed & Managed by{" "}
           <a
             className="text-secondary font-semibold underline ml-1"
             href="https://binarylogix.in/"
