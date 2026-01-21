@@ -21,13 +21,8 @@ export default function AboutSection() {
   ];
 
   return (
-<<<<<<< HEAD
-    <section id="about" className="py-16  bg-bgColor">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-=======
     <section id="about" className="py-28  bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-7xl  mx-auto  px-4 grid md:grid-cols-2 gap-16 items-center">
->>>>>>> 7aaaa0e1316fb10f8d4b98daf08a0b7bb1d35e29
         {/* IMAGE */}
         <motion.img
           src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=870&auto=format&fit=crop"
