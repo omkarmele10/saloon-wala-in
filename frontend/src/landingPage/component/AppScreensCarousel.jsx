@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 const screenshots = [
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
-    "public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
+    "/public/assets/wallpaper1.png",
 ];
 const positions = [
     { x: -420, scale: 0.6, z: 5 },
