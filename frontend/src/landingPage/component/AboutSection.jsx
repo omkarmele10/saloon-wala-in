@@ -21,8 +21,8 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-28  bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-7xl  px-4 grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-16  bg-bgColor">
+      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
         {/* IMAGE */}
         <motion.img
           src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=870&auto=format&fit=crop"
@@ -63,7 +63,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15 }}
               >
-                <h3 className="text-2xl font-bold text-purple-600">
+                <h3 className="text-2xl font-bold text-primary">
                   {item.value}
                 </h3>
                 <p className="text-sm text-gray-600 mt-2">{item.label}</p>

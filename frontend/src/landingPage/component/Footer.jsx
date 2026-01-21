@@ -13,7 +13,7 @@ import logo from "/assets/logo/logo.jpeg";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-secondary text-white">
       {/* MAIN FOOTER */}
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 grid md:grid-cols-4 gap-12">
 
@@ -112,11 +112,11 @@ export default function Footer() {
       </div>
 
       {/* FOOTER BOTTOM */}
-      <div className="border-t border-white/20 text-center py-6 text-sm text-white/70">
-        <p className="text-white/70 text-sm">
+      <div className="border-t border-white/20 text-center py-6 text-sm text-gray-300">
+        <p className=" text-sm">
           © 2026 Developed & Managed by{" "}
           <a
-            className="text-secondary font-semibold underline ml-1"
+            className="text-blue-400 font-semibold underline ml-1"
             href="https://binarylogix.in/"
             target="_blank"
             rel="noreferrer"

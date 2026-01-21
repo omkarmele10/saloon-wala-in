@@ -11,13 +11,13 @@ export default function SpaSalonGallery() {
   ];
 
   return (
-    <section className="py-28 px-6 bg-linear-to-b from-purple-50 to-white">
+    <section className="py-14 px-6 bg-bgColor">
       {/* Heading */}
       <motion.h2
         className="text-2xl md:text-3xl font-bold text-center mb-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, ease: "linear" }}
       >
         Gallery
       </motion.h2>
@@ -39,7 +39,7 @@ export default function SpaSalonGallery() {
             className="mb-6 relative overflow-hidden rounded-3xl group cursor-pointer"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.1, duration: i * 0.2, ease: "linear" }}
           >
             {/* Image */}
             <img

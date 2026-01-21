@@ -1,3 +1,4 @@
+
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -8,13 +9,14 @@ import {
     Instagram,
     Facebook,
     Youtube,
+    Send,
 } from "lucide-react";
 
 export default function Contact() {
     const formRef = useRef();
+
     const handleSubmit = (e) => {
         e.preventDefault();
-
         emailjs
             .sendForm(
                 "service_vql9kv9",
@@ -35,180 +37,163 @@ export default function Contact() {
     };
 
     return (
-        <section
-            id="contact"
-            className="py-28 px-6 bg-secondary/10"
-        >
-            {/* Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <motion.h2
-                    className="text-2xl md:text-4xl font-bold mb-4 text-[--color-dark]"
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                >
-                    Contact Us
-                </motion.h2>
+        <section id="contact" className="relative py-14 px-6 overflow-hidden bg-white">
+            {/* --- DECORATIVE BACKGROUND ELEMENTS --- */}
+            {/* <div className="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" /> */}
+            {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" /> */}
 
-                <motion.p
-                    className="text-gray-600 "
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                >
-                    Have questions about bookings, services, or becoming a vendor?
-                    We’re here to help you anytime.
-                </motion.p>
-            </div>
+            <div className="max-w-7xl mx-auto relative z-10">
+                {/* HEADING SECTION */}
+                <div className="text-center mb-20">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="text-primary font-bold tracking-widest uppercase text-sm"
+                    >
+                        Get In Touch
+                    </motion.span>
+                    <motion.h2
+                        className="text-4xl md:text-5xl font-extrabold mt-2 mb-4 text-gray-900"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                    >
+                        Let’s Start a <span className="text-primary">Conversation</span>
+                    </motion.h2>
+                    <motion.p
+                        className="text-gray-500 max-w-xl mx-auto text-lg"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                    >
+                        Have questions? We’re here to help you find the perfect beauty and wellness experience.
+                    </motion.p>
+                </div>
 
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-stretch">
-                {/* LEFT – CONTACT DETAILS */}
-                <motion.div
-                    className="bg-primary text-white rounded-3xl p-10 flex flex-col justify-between shadow-lg"
-                    initial={{ opacity: 0, x: -15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                >
-                    <div>
-                        <h3 className="text-2xl font-semibold mb-4">
-                            SALOON WALA
-                        </h3>
+                <div className="grid lg:grid-cols-12 gap-8">
 
-                        <p className="text-white/80 mb-10 leading-relaxed">
-                            Discover, book, and manage beauty, salon, and wellness services
-                            from trusted professionals across multiple vendors.
-                        </p>
+                    {/* LEFT COLUMN: INFO CARD */}
+                    <motion.div
+                        className="lg:col-span-5 bg-primary text-white rounded-[2rem] p-8 md:p-12 shadow-2xl flex flex-col justify-between relative overflow-hidden"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                    >
+                        {/* Inner decoration */}
+                        <div className="absolute top-0 right-0 p-4 opacity-10">
+                            <div className="w-32 h-32 border-8 border-white rounded-full" />
+                        </div>
 
-                        <div className="space-y-6 text-sm">
-                            <div className="flex items-center gap-4">
-                                <Phone size={18} />
-                                <span>+91 9XXXXXXXXX</span>
+                        <div>
+                            <h3 className="text-3xl font-bold mb-6 tracking-tight">SALOON WALA</h3>
+                            <p className="text-white/80 mb-12 text-lg leading-relaxed">
+                                Seamlessly connecting you with premium salon services. Your beauty journey starts here.
+                            </p>
+
+                            <div className="space-y-8">
+                                {[
+                                    { icon: <Phone size={22} />, label: "Call Us", val: "+91 9XXXXXXXXX" },
+                                    { icon: <Mail size={22} />, label: "Email Us", val: "support@saloonwala.com" },
+                                    { icon: <MapPin size={22} />, label: "Visit Us", val: "Bhopal, Madhya Pradesh, India" },
+                                ].map((item, idx) => (
+                                    <div key={idx} className="flex items-center gap-5 group">
+                                        <div className="p-4 bg-white/10 rounded-2xl group-hover:bg-white group-hover:text-primary transition-all duration-300">
+                                            {item.icon}
+                                        </div>
+                                        <div>
+                                            <p className="text-xs text-white/50 uppercase font-bold">{item.label}</p>
+                                            <p className="text-lg font-medium">{item.val}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* SOCIALS */}
+                        <div className="mt-16 pt-8 border-t border-white/10">
+                            <p className="text-sm font-medium mb-5 opacity-70 uppercase tracking-widest">Follow our journey</p>
+                            <div className="flex gap-4">
+                                {[
+                                    { icon: <Instagram size={20} />, link: "#" },
+                                    { icon: <Facebook size={20} />, link: "#" },
+                                    { icon: <Youtube size={20} />, link: "#" }
+                                ].map((soc, i) => (
+                                    <motion.a
+                                        key={i}
+                                        whileHover={{ y: -5 }}
+                                        href={soc.link}
+                                        className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white hover:text-primary transition-colors"
+                                    >
+                                        {soc.icon}
+                                    </motion.a>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* RIGHT COLUMN: CONTACT FORM */}
+                    <motion.div
+                        className="lg:col-span-7 bg-white rounded-[2rem] shadow-xl border border-gray-100 p-8 md:p-12"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                    >
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                                <input
+                                    name="user_name"
+                                    type="text"
+                                    placeholder="John Doe"
+                                    className="w-full bg-gray-50 border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    required
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-700 ml-1">Phone Number</label>
+                                <input
+                                    name="user_phone"
+                                    type="tel"
+                                    placeholder="+91 --- --- ----"
+                                    className="w-full bg-gray-50 border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    required
+                                />
                             </div>
 
-                            <div className="flex items-center gap-4">
-                                <Mail size={18} />
-                                <span>support@saloonwala.com</span>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-700 ml-1">I am interested in</label>
+                                <select
+                                    name="interest"
+                                    className="w-full bg-gray-50 border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none"
+                                    required
+                                >
+                                    <option value="">Select a service</option>
+                                    <option value="Booking a Service">Booking a Service</option>
+                                    <option value="Spa & Salon Services">Spa & Salon Services</option>
+                                    <option value="Vendor Registration">Vendor Registration</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Support">Support</option>
+                                </select>
                             </div>
 
-                            <div className="flex items-start gap-4">
-                                <MapPin size={18} className="mt-1" />
-                                <span>
-                                    Head Office,
-                                    <br />
-                                    Bhopal,Madhya Pradesh , India
-                                </span>
+                            <div className="space-y-2">
+                                <label className="text-sm font-bold text-gray-700 ml-1">Your Message</label>
+                                <textarea
+                                    name="message"
+                                    placeholder="How can we help you today?"
+                                    rows="4"
+                                    className="w-full bg-gray-50 border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                />
                             </div>
-                        </div>
-                    </div>
 
-                    {/* SOCIAL LINKS */}
-                    <div className="mt-12">
-                        <p className="text-white/70 text-sm mb-4 uppercase tracking-wide">
-                            Follow Us
-                        </p>
-
-                        <div className="flex gap-4">
-                            <a
-                                href="#"
-                                className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-primary transition"
-                                aria-label="Instagram"
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                type="submit"
+                                className="w-full bg-secondary text-white py-5 rounded-2xl font-bold text-lg shadow-lg shadow-secondary/30 hover:bg-primary transition-all flex items-center justify-center gap-3"
                             >
-                                <Instagram size={18} />
-                            </a>
-
-                            <a
-                                href="#"
-                                className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-primary transition"
-                                aria-label="Facebook"
-                            >
-                                <Facebook size={18} />
-                            </a>
-
-                            <a
-                                href="#"
-                                className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-primary transition"
-                                aria-label="YouTube"
-                            >
-                                <Youtube size={18} />
-                            </a>
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* RIGHT – FORM */}
-                <motion.form
-                    ref={formRef}
-                    className="bg-white rounded-3xl shadow-xl p-10"
-                    onSubmit={handleSubmit}
-                    initial={{ opacity: 0, x: 15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                >
-                    <h4 className="text-2xl font-semibold mb-8 text-[--color-dark]">
-                        Send Us a Message
-                    </h4>
-
-                    <div className="grid gap-6">
-                        <div>
-                            <label className="block text-sm font-medium mb-2">
-                                Full Name
-                            </label>
-                            <input
-                                name="user_name"
-                                placeholder="Enter your full name"
-                                type="text"
-                                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-secondary"
-                                required
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-medium mb-2">
-                                Phone Number
-                            </label>
-                            <input
-                                name="user_phone"
-                                placeholder="Enter your phone number"
-                                type="tel"
-                                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-secondary"
-                                required
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-medium mb-2">
-                                I am interested in
-                            </label>
-                            <select
-                                name="interest"
-                                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-secondary"
-                                required
-                            >
-                                <option value="">Select Option</option>
-                                <option value="Booking a Service">Booking a Service</option>
-                                <option value="Spa & Salon Services">Spa & Salon Services</option>
-                                <option value="Vendor Registration">Vendor Registration</option>
-                                <option value="Partnership">Partnership</option>
-                                <option value="Support">Support</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-medium mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                placeholder="Write your message here..."
-                                name="message"
-                                rows="4"
-                                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-secondary"
-                            />
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="mt-4 bg-secondary hover:bg-primary text-white py-3 rounded-xl font-semibold hover:opacity-90 transition"
-                        >
-                            Send Message
-                        </button>
-                    </div>
-                </motion.form>
+                                Send Message
+                                <Send size={20} />
+                            </motion.button>
+                        </form>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

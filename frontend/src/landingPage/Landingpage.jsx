@@ -7,19 +7,27 @@ import SpaSalonGallery from "./component/SpaSalonGallery"
 import Hero from "./component/Hero"
 import TopServicesAndProducts from "./component/TopServicesAndProducts"
 import MissionVision from "./component/MissionVision"
+import TestimonialsRidehub from "./component/TestimonialsRidehub"
+import ContactRidehub from "./component/ContactRidehub"
 
+import Download from "./component/Download"
+import AppScreensCarousel from "./component/AppScreensCarousel"
 AboutSection
 const Landingpage = () => {
     return (
         <div>
             <Navbar />
             <Hero />
+            <AppScreensCarousel />
             <AboutSection />
             <MissionVision />
             <SpaSalonGallery />
             <TopServicesAndProducts />
             <Testimonial />
             <ContactComponent />
+
+            {/* <ContactRidehub /><TestimonialsRidehub /> */}
+            <Download />
             <Footer />
         </div>
     )

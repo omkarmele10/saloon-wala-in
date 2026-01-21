@@ -1,4 +1,13 @@
-import { Sparkles, Scissors, ShoppingBag } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+    Sparkles,
+    Scissors,
+    Droplet,
+    Wind,
+    Sun,
+} from "lucide-react";
+
+/* ===================== DATA ===================== */
 
 const services = {
     spa: [
@@ -48,106 +57,197 @@ const services = {
 };
 
 const products = [
-    "Hair Serum",
-    "Face Cleanser",
-    "Massage Oils",
-    "Hair Wax",
-    "Skin Glow Cream",
+    {
+        name: "Hair Serum",
+        desc: "Smoothens frizz & adds natural shine",
+        tag: "Hair Care",
+        badge: "Best Seller",
+    },
+    {
+        name: "Face Cleanser",
+        desc: "Deep cleansing for fresh glowing skin",
+        tag: "Skin Care",
+    },
+    {
+        name: "Massage Oils",
+        desc: "Relaxes muscles & improves circulation",
+        tag: "Body Care",
+        badge: "Pro Choice",
+    },
+    {
+        name: "Hair Wax",
+        desc: "Strong hold with a natural finish",
+        tag: "Styling",
+    },
+    {
+        name: "Skin Glow Cream",
+        desc: "Hydration for radiant & healthy skin",
+        tag: "Skin Care",
+    },
 ];
 
-const TopServicesAndProducts = () => {
+const productIcons = {
+    "Hair Serum": Droplet,
+    "Face Cleanser": Sparkles,
+    "Massage Oils": Wind,
+    "Hair Wax": Scissors,
+    "Skin Glow Cream": Sun,
+};
+
+/* ===================== ANIMATIONS ===================== */
+
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: { staggerChildren: 0.12 },
+    },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+/* ===================== COMPONENT ===================== */
+
+export default function TopServicesAndProducts() {
     return (
-        <section id="services" className="bg-gray-50 py-24">
+        <motion.section
+            id="services"
+            className="bg-gray-50 py-14"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={container}
+        >
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* SECTION TITLE */}
-                <div className="text-center mb-16">
+                <motion.div className="text-center mb-16" variants={item}>
                     <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
                         Top Services & Products
                     </h2>
                     <p className="text-gray-600 mt-4">
-                        Most booked spa & salon services loved by our customers
+                        Most booked spa & salon experiences loved by our customers
                     </p>
-                </div>
+                </motion.div>
 
-                {/* SERVICES GRID */}
+                {/* SERVICES */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-                    {/* SPA SERVICES */}
-                    <div className="bg-white rounded-2xl p-8 shadow">
+                    {/* SPA */}
+                    <motion.div className="bg-white rounded-2xl p-8 shadow" variants={item}>
                         <div className="flex items-center gap-3 mb-8">
-                            <Sparkles className="text-gray-800" />
+                            <Sparkles />
                             <h3 className="text-2xl font-bold">Spa Services</h3>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6">
-                            {services.spa.map((item, index) => (
-                                <div
-                                    key={index}
+                        <motion.div
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                            variants={container}
+                        >
+                            {services.spa.map((s, i) => (
+                                <motion.div
+                                    key={i}
+                                    variants={item}
+                                    whileHover={{ y: -6 }}
                                     className="group rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition"
                                 >
                                     <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className="h-40 w-full object-cover group-hover:scale-105 transition duration-500"
+                                        src={s.image}
+                                        alt={s.name}
+                                        className="h-40 w-full object-cover group-hover:scale-110 transition duration-500"
                                     />
-                                    <div className="p-4 text-center font-medium">
-                                        {item.name}
-                                    </div>
-                                </div>
+                                    <div className="p-4 text-center font-medium">{s.name}</div>
+                                </motion.div>
                             ))}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
-                    {/* SALON SERVICES */}
-                    <div className="bg-white rounded-2xl p-8 shadow">
+                    {/* SALON */}
+                    <motion.div className="bg-white rounded-2xl p-8 shadow" variants={item}>
                         <div className="flex items-center gap-3 mb-8">
-                            <Scissors className="text-gray-800" />
+                            <Scissors />
                             <h3 className="text-2xl font-bold">Salon Services</h3>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6">
-                            {services.salon.map((item, index) => (
-                                <div
-                                    key={index}
+                        <motion.div
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                            variants={container}
+                        >
+                            {services.salon.map((s, i) => (
+                                <motion.div
+                                    key={i}
+                                    variants={item}
+                                    whileHover={{ y: -6 }}
                                     className="group rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition"
                                 >
                                     <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className="h-40 w-full object-cover group-hover:scale-105 transition duration-500"
+                                        src={s.image}
+                                        alt={s.name}
+                                        className="h-40 w-full object-cover group-hover:scale-110 transition duration-500"
                                     />
-                                    <div className="p-4 text-center font-medium">
-                                        {item.name}
-                                    </div>
-                                </div>
+                                    <div className="p-4 text-center font-medium">{s.name}</div>
+                                </motion.div>
                             ))}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {/* PRODUCTS */}
-                <div className="mt-20 bg-white rounded-2xl p-10 shadow">
-                    <div className="flex items-center gap-3 mb-8">
-                        <ShoppingBag className="text-gray-800" />
-                        <h3 className="text-2xl font-bold">Top Products</h3>
+                <motion.div
+                    className="mt-24 bg-[#F3EDFF] rounded-3xl p-10 md:p-14"
+                    variants={item}
+                >
+                    <div className="text-center mb-14">
+                        <h3 className="text-3xl font-extrabold text-gray-900">
+                            Top Products
+                        </h3>
+                        <p className="text-gray-600 mt-3">
+                            Professional products trusted by our experts
+                        </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-4">
-                        {products.map((product, index) => (
-                            <span
-                                key={index}
-                                className="px-6 py-3 bg-gray-100 rounded-full font-medium hover:bg-gray-900 hover:text-white transition cursor-pointer"
-                            >
-                                {product}
-                            </span>
-                        ))}
-                    </div>
-                </div>
+                    <motion.div
+                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8"
+                        variants={container}
+                    >
+                        {products.map((p, i) => {
+                            const Icon = productIcons[p.name];
+                            return (
+                                <motion.div
+                                    key={i}
+                                    variants={item}
+                                    whileHover={{ y: -10 }}
+                                    className="group relative bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300"
+                                >
+                                    {p.badge && (
+                                        <span className="absolute top-3 right-3 text-[10px] px-2 py-1 rounded-full bg-primary/10 text-primary font-semibold">
+                                            {p.badge}
+                                        </span>
+                                    )}
 
+                                    <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition">
+                                        <Icon size={26} />
+                                    </div>
+
+                                    <p className="font-semibold text-gray-800 group-hover:text-primary transition">
+                                        {p.name}
+                                    </p>
+
+                                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                                        {p.desc}
+                                    </p>
+
+                                    <span className="inline-block mt-4 text-xs font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-700">
+                                        {p.tag}
+                                    </span>
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
-};
-
-export default TopServicesAndProducts;
+}

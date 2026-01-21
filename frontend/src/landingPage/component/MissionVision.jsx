@@ -3,11 +3,8 @@ import { Target, Eye } from "lucide-react";
 
 export default function MissionVision() {
     return (
-        <section className="relative py-24 px-6 bg-secondary/10 overflow-hidden">
+        <section className="relative py-14 px-6 overflow-hidden">
 
-            {/* Decorative Blur */}
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-secondary/30 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl" />
 
             <div className="relative max-w-7xl mx-auto">
 
