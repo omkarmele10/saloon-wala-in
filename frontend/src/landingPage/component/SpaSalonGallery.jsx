@@ -14,7 +14,7 @@ export default function SpaSalonGallery() {
     <section className="py-14 px-6 bg-bgColor">
       {/* Heading */}
       <motion.h2
-        className="text-2xl md:text-3xl font-bold text-center mb-6"
+        className="text-center text-3xl md:text-4xl  font-bold text-primary mb-4 tracking-tight"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "linear" }}

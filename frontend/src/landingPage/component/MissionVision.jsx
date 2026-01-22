@@ -11,13 +11,13 @@ export default function MissionVision() {
                 {/* Heading */}
                 <div className="text-center mb-20">
                     <motion.h2
-                        className="text-2xl md:text-3xl font-extrabold  mb-6"
+                        className="text-3xl md:text-4xl  font-bold text-slate-900 mb-4 tracking-tight"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        Our{" "}
-                        <span className="text-primary">Mission</span> &{" "}
+
+                        <span className="text-primary">Our Mission</span> &{" "}
                         <span className="text-secondary">Vision</span>
                     </motion.h2>
 

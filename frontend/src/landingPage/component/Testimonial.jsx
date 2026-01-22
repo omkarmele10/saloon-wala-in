@@ -36,8 +36,8 @@ export default function Testimonial() {
       className="py-16 px-6 bg-bgColor"
     >
       {/* Heading */}
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-        What Our Users Say
+      <h2 className="text-center text-3xl md:text-4xl   font-bold text-slate-900 mb-4 tracking-tight">
+        <span className="text-primary">What Our </span> Users Say
       </h2>
 
       <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ export default function Testimonial() {
       >
         {testimonials.map((t, i) => (
           <SwiperSlide key={i}>
-            <div className="bg-white rounded-3xl p-8 my-4 shadow-lg h-full hover:-translate-y-2 transition duration-300">
+            <div className="bg-white rounded-3xl h-[320px] box-border p-4 my-4 shadow-lg  hover:-translate-y-2 transition duration-300">
               {/* Quote */}
               <span className="text-primary text-6xl font-serif leading-none">
                 “

@@ -125,8 +125,8 @@ export default function TopServicesAndProducts() {
 
                 {/* SECTION TITLE */}
                 <motion.div className="text-center mb-16" variants={item}>
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
-                        Top Services & Products
+                    <h2 className="text-3xl md:text-4xl font-bold  text-slate-900 mb-4 tracking-tight">
+                        <span className="text-primary">Top Services </span> & Products
                     </h2>
                     <p className="text-gray-600 mt-4">
                         Most booked spa & salon experiences loved by our customers
@@ -195,7 +195,7 @@ export default function TopServicesAndProducts() {
                 </div>
 
                 {/* PRODUCTS */}
-                <motion.div
+                {/* <motion.div
                     className="mt-24 bg-[#F3EDFF] rounded-3xl p-10 md:p-14"
                     variants={item}
                 >
@@ -209,7 +209,7 @@ export default function TopServicesAndProducts() {
                     </div>
 
                     <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8"
+                        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8"
                         variants={container}
                     >
                         {products.map((p, i) => {
@@ -246,7 +246,7 @@ export default function TopServicesAndProducts() {
                             );
                         })}
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </motion.section>
     );

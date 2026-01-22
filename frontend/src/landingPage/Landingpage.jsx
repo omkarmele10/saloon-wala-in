@@ -12,14 +12,17 @@ import ContactRidehub from "./component/ContactRidehub"
 
 import Download from "./component/Download"
 import AppScreensCarousel from "./component/AppScreensCarousel"
+
+import DownloadAppQR from "./component/DownloadAppQR"
 AboutSection
 const Landingpage = () => {
     return (
         <div>
             <Navbar />
             <Hero />
-            <AppScreensCarousel />
+            <DownloadAppQR />
             <AboutSection />
+            <AppScreensCarousel />
             <MissionVision />
             <SpaSalonGallery />
             <TopServicesAndProducts />

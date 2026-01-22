@@ -23,7 +23,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="Spa & Salon Logo"
-              className="w-20 mb-4 rounded-xl p-2 shadow bg-white "
+              className="w-20 mb-4 rounded-md p-2 shadow bg-white "
             />
           </a>
 
@@ -41,7 +41,6 @@ export default function Footer() {
             <li><a href="#home" className="hover:text-white">Home</a></li>
             <li><a href="#about" className="hover:text-white">About Us</a></li>
             <li><a href="#services" className="hover:text-white">Services</a></li>
-            <li><a href="#vendors" className="hover:text-white">Vendors</a></li>
             <li><a href="#contact" className="hover:text-white">Contact</a></li>
           </ul>
         </div>

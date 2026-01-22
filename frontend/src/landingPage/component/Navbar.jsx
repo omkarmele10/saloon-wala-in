@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "/assets/logo/logo.jpeg";
+import app from "/public/assets/app.png"
+import play from "/public/assets/play.png"
 
 const sections = [
   { id: "home", label: "Home" },
@@ -110,7 +112,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* LOGO */}
         <a href="#home">
-          <img src={logo} className="h-14" />
+          <img src={logo} className="h-10" />
         </a>
         {/* DESKTOP MENU */}
         <nav className="hidden md:flex gap-8 font-medium">
@@ -124,15 +126,27 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        {/* DESKTOP DOWNLOAD BUTTON */}
-        <a
-          href="https://play.google.com/store/apps/details?id=com.google.android.youtube"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex bg-secondary text-white px-5 py-2 rounded-full font-medium hover:opacity-90 transition"
-        >
-          Download App
-        </a>
+        <div className="flex gap-6">
+          {/* DESKTOP DOWNLOAD BUTTON */}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.google.android.youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex lg:w-30 text-white   font-medium hover:opacity-90 transition"
+          >
+            <img src={play} />
+          </a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.google.android.youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex lg:w-30 text-white font-medium hover:opacity-90 transition"
+          >
+            <img src={app} />
+          </a>
+        </div>
+
 
         {/* MOBILE MENU ICON */}
         <button onClick={() => setOpen(!open)} className="md:hidden">

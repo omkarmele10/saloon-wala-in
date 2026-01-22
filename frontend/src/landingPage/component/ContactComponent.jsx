@@ -2,6 +2,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import logo from "/assets/logo/logo.jpeg";
 import {
     Phone,
     Mail,
@@ -53,11 +54,11 @@ export default function Contact() {
                         Get In Touch
                     </motion.span>
                     <motion.h2
-                        className="text-4xl md:text-5xl font-extrabold mt-2 mb-4 text-gray-900"
+                        className=" mt-2 mb-4 text-3xl md:text-4xl  font-black text-slate-900 tracking-tight"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                     >
-                        Let’s Start a <span className="text-primary">Conversation</span>
+                        <span className="text-primary"> Let’s Start </span>a Conversation
                     </motion.h2>
                     <motion.p
                         className="text-gray-500 max-w-xl mx-auto text-lg"
@@ -82,7 +83,13 @@ export default function Contact() {
                         </div>
 
                         <div>
-                            <h3 className="text-3xl font-bold mb-6 tracking-tight">SALOON WALA</h3>
+                            <a href="#home">
+                                <img
+                                    src={logo}
+                                    alt="Spa & Salon Logo"
+                                    className="w-20 mb-4 rounded-md p-2 shadow bg-white "
+                                />
+                            </a>
                             <p className="text-white/80 mb-12 text-lg leading-relaxed">
                                 Seamlessly connecting you with premium salon services. Your beauty journey starts here.
                             </p>
